@@ -7,7 +7,7 @@ describe('Main function', () => {
 
 
 	it('should return a Promise', () => {
-		expect(typeof runMe({}).then).to.equal("function");
+		expect(runMe({})).to.be.instanceof(Promise);
 	});
 
 
