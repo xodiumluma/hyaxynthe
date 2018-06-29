@@ -12,6 +12,6 @@ const process = <T>(target: T): Promise<T>  => {
 	});
 };
 
-export default function (target: any): Promise<any> {
+export function hyaxynthe (target: any): Promise<any> {
 	return process<any>(target);
 }
