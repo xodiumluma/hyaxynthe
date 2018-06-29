@@ -19,6 +19,9 @@ describe('Main function', () => {
 		return assert.isRejected(runMe(false), false);
 	});
 
+	it('should return a rejected Promise given a string input', (): void => {
+		return assert.isRejected(runMe("string"), false);
+	});
 
 
 
