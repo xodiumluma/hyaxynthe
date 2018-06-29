@@ -1,7 +1,8 @@
 const process = <T>(target: T): Promise<T>  => {
 		return new Promise<T>((resolve: (resolvedValue: any | void) => void, reject: (rejectedValue: any | void) => void) => {
-		if (typeof target === "boolean") {
-			reject("Cannot be boolean");
+			const whatType = typeof target;
+		if (whatType === "boolean" || whatType === "string") {
+			reject("Cannot be " + whatType);
 		}
 	});
 };
