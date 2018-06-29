@@ -28,5 +28,9 @@ describe('Main function', () => {
 		return assert.isRejected(runMe(4), false);
 	});
 
+	it('should return a rejected Promise given an undefined input', async (): Promise<void> => {
+		return assert.isRejected(runMe(void 0), false);
+	});
+
 
 });
