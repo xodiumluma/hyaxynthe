@@ -24,5 +24,9 @@ describe('Main function', () => {
 	});
 
 
+	it('should return a rejected Promise given a numeric input', async (): Promise<void> => {
+		return assert.isRejected(runMe(4), false);
+	});
+
 
 });
