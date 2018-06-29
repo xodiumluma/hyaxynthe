@@ -15,11 +15,11 @@ describe('Main function', () => {
 		expect(runMe({})).to.be.instanceof(Promise);
 	});
 
-	it('should return a rejected Promise given a boolean input', (): void => {
+	it('should return a rejected Promise given a boolean input', async (): Promise<void> => {
 		return assert.isRejected(runMe(false), false);
 	});
 
-	it('should return a rejected Promise given a string input', (): void => {
+	it('should return a rejected Promise given a string input', async (): Promise<void> => {
 		return assert.isRejected(runMe("string"), false);
 	});
 
