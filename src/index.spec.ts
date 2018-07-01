@@ -8,10 +8,10 @@ chai.use(chaiAsPromised);
 const assert: any = chai.assert;
 
 
-describe('Main function', () => {
+describe('Main function', (): void => {
 
 
-	it('should return a Promise', () => {
+	it('should return a Promise', (): void => {
 		expect(hyaxynthe({})).to.be.instanceof(Promise);
 	});
 
