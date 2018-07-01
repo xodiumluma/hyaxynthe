@@ -5,6 +5,7 @@ const process = <T>(target: T): Promise<T>  => {
 			whatType === "boolean"   || 
 			whatType === "string"    ||
 			whatType === "number"    ||
+			whatType === "function"  ||
 			whatType === "undefined"
 		) {
 			reject("Cannot be " + whatType);
