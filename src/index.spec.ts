@@ -28,6 +28,11 @@ describe('Main function', () => {
 		return assert.isRejected(hyaxynthe(4), false);
 	});
 
+	it('should return a rejected Promise given a function', async (): Promise<void> => {
+		return assert.isRejected(hyaxynthe(function () {}), false);
+	});
+
+
 	it('should return a rejected Promise given an undefined input', async (): Promise<void> => {
 		return assert.isRejected(hyaxynthe(void 0), false);
 	});
