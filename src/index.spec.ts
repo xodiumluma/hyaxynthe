@@ -2,10 +2,9 @@ import { hyaxynthe } from './index';
 import { expect } from 'chai';
 import 'mocha';
 
-import chai = require("chai");
 import chaiAsPromised = require("chai-as-promised");
 chai.use(chaiAsPromised);
-const assert: any = chai.assert;
+const assert: Chai.Assert = chai.assert;
 
 
 describe('Main function', (): void => {
