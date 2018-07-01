@@ -2,6 +2,7 @@ import { hyaxynthe } from './index';
 import { expect } from 'chai';
 import 'mocha';
 
+import chai = require("chai");
 import chaiAsPromised = require("chai-as-promised");
 chai.use(chaiAsPromised);
 const assert: Chai.Assert = chai.assert;
