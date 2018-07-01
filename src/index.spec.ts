@@ -1,6 +1,5 @@
 import { hyaxynthe } from './index';
 import { expect } from 'chai';
-import 'mocha';
 
 import chai = require("chai");
 import chaiAsPromised = require("chai-as-promised");
