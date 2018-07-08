@@ -70,5 +70,8 @@ describe('Main function', (): void => {
 	});
 
 
+	it('should return a rejected Promise given no input', async (): Promise<void> => {
+		return assert.isRejected(hyaxynthe(), false);
+	});
 
 });
