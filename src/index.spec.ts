@@ -47,6 +47,14 @@ describe('Main function', (): void => {
 		return assert.isRejected(hyaxynthe(4), false);
 	});
 
+	it('should return a rejected Promise given a float input', async (): Promise<void> => {
+		return assert.isRejected(hyaxynthe(4.0), false);
+	});
+
+	it('should return a rejected Promise given a NaN input', async (): Promise<void> => {
+		return assert.isRejected(hyaxynthe(+"a"), false);
+	});
+
 	it('should return a rejected Promise given a function', async (): Promise<void> => {
 		return assert.isRejected(hyaxynthe(function () {}), false);
 	});
