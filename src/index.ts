@@ -14,12 +14,12 @@ const process = <T>(target: T): Promise<T>  => {
 	});
 };
 
-export function hyaxynthe (...target: any[]): Promise<any> {
+export function hyaxynthe<T> (...target: T[]): Promise<T> {
 	if (!arguments.length) { 
 		return Promise.reject("hyaxynthe does not support no input. Please provide an object or array input"); 
 	} 
 	if (arguments.length > 1) { 
 		return Promise.reject("hyaxynthe only supports one input"); 
 	}
-	return process<any>(target.pop());
+	return process<T>(target.pop());
 }
