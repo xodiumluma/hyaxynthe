@@ -70,8 +70,14 @@ describe('Main function', (): void => {
 	});
 
 
+	// invalid input lengths
+	
 	it('should return a rejected Promise given no input', async (): Promise<void> => {
 		return assert.isRejected(hyaxynthe(), false);
+	});
+
+	it('should return a rejected Promise given two empty objects (multiple valid inputs)', async (): Promise<void> => {
+		return assert.isRejected(hyaxynthe({}, {}), false);
 	});
 
 });
