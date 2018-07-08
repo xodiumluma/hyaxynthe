@@ -14,6 +14,7 @@ const process = <T>(target: T): Promise<T>  => {
 	});
 };
 
-export function hyaxynthe (target: any): Promise<any> {
+export function hyaxynthe (target?: any): Promise<any> {
+	if (!arguments.length) { return Promise.resolve("Ok no input"); } 
 	return process<any>(target);
 }
