@@ -14,7 +14,7 @@ const process = <T>(target: T): Promise<T>  => {
 	});
 };
 
-export function hyaxynthe (target?: any): Promise<any> {
+export function hyaxynthe (...target: any[]): Promise<any> {
 	if (!arguments.length) { return Promise.reject("hyaxynthe does not support no input. Please provide an object or array input"); } 
-	return process<any>(target);
+	return process<any>(target.pop());
 }
