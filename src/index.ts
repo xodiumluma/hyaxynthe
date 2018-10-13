@@ -1,18 +1,6 @@
-const process = <T>(target: T): Promise<T>  => {
-		return new Promise<T>((resolve: (resolvedValue: any | void) => void, reject: (rejectedValue: any | void) => void) => {
-			const whatType = typeof target;
-		if (
-			whatType === "boolean"   || 
-			whatType === "string"    ||
-			whatType === "number"    ||
-			whatType === "function"  ||
-			whatType === "undefined" ||
-			(whatType === "object" && target + "" === "null")
-		) {
-			reject("Cannot be " + whatType);
-		}
-	});
-};
+import { runtimeCheck } from './runtimeCheck';
+
+
 
 export function hyaxynthe<T> (...target: T[]): Promise<T> {
 	if (!arguments.length) { 
@@ -21,5 +9,5 @@ export function hyaxynthe<T> (...target: T[]): Promise<T> {
 	if (arguments.length > 1) { 
 		return Promise.reject("hyaxynthe only supports one input"); 
 	}
-	return process<T>(target.pop());
+	return runtimeCheck<T>(target.pop());
 }
