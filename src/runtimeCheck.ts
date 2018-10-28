@@ -1,5 +1,5 @@
 export const runtimeCheck = <T>(target: T): Promise<T>  => {
-	return new Promise<T>((resolve: (resolvedValue: any | void) => void, reject: (rejectedValue: any | void) => void) => {
+	return new Promise<T>((resolve: (resolvedValue: any | void) => void, reject: (rejectedValue: string) => void) => {
 			const whatType: string = typeof target;
 		if (
 			whatType === "boolean"   || 
