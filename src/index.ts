@@ -2,7 +2,7 @@ import { runtimeCheck } from './runtimeCheck';
 
 
 
-export function hyaxynthe<T> (...target: T[]): Promise<T> {
+export function parameterCheck<T> (...target: T[]): Promise<T> {
 	if (!arguments.length) { 
 		return Promise.reject("hyaxynthe does not support no input. Please provide an object or array input"); 
 	} 
