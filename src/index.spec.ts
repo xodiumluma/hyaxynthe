@@ -1,9 +1,6 @@
 import { parameterCheck } from './index';
 import { expect } from 'chai';
 
-
-
-
 import chai = require("chai");
 import chaiAsPromised = require("chai-as-promised");
 chai.use(chaiAsPromised);
@@ -49,5 +46,6 @@ describe('Main function', (): void => {
 	it('should return a rejected Promise given two empty objects (multiple valid inputs)', async (): Promise<void> => {
 		return assert.isRejected(parameterCheck<object>({}, {}), false);
 	});
+
 
 });
