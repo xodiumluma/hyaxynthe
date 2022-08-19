@@ -1,20 +1,15 @@
-export const runtimeCheck = <T>(target: T): Promise<T> => new Promise<T>(
-  (
-    resolve: (resolvedValue: any | void) => void,
-    reject: (rejectedValue: string) => void
-  ) => {
-    const whatType = typeof target;
-    if (
-      whatType === "bigint"    ||
-      whatType === "boolean"   ||
-      whatType === "function"  ||
-      whatType === "number"    ||
-      whatType === "string"    ||
-      whatType === "symbol"    ||
-      whatType === "undefined" ||
-      (whatType === "object" && `${target}` === `null`)
-    ) {
-      reject(`Cannot be ${whatType}`);
-    }
-  }
-);
+export const runtimeCheck = <T>(target: T): Promise<T>  => {
+	return new Promise<T>((resolve: (resolvedValue: any | void) => void, reject: (rejectedValue: string) => void) => {
+		const whatType: string = typeof target;
+		if (
+			whatType === "boolean"   || 
+			whatType === "string"    ||
+			whatType === "number"    ||
+			whatType === "function"  ||
+			whatType === "undefined" ||
+			(whatType === "object" && `${target}` === "null")
+		) {
+			reject("Cannot be " + whatType);
+		}
+	});
+};
